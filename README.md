@@ -16,3 +16,14 @@ REST é uma arquitetura que envia texto por isso é mais leve e consequente mais
 É uma abstração capaz de se comunicar em qualquer aplicação. O que permite a implementação em diferentes tecnologias é o fato de ser arquivos de texto.
 
 ***
+
+## WebAPI
+
+#### Convenções
+
+    - Os nomes dos métodos são os verbos HTTP (GET, POST, PUT, DELETE etc.)
+
+
+#### Controller
+
+É a estrutura da aplicação, todos os `requests` e `reponses` são manipulados pela `Controller`.
