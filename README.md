@@ -1,13 +1,14 @@
 # ASP.NET Core WebAPI - REST
 
+## 1. Conceitos Teóricos
 
-## REST x SOAP
+### REST x SOAP
 
-### SOAP (Simple Object Access Protocol)
+#### SOAP (Simple Object Access Protocol)
 
 SOAP é um protocolo que formata os dados em um padrão XML para serem enviado.
 
-### REST (Representional State Transfer)
+#### REST (Representional State Transfer)
 
 REST é uma arquitetura que envia texto por isso é mais leve e consequente mais interessante de ser usado.
 
@@ -17,7 +18,7 @@ REST é uma arquitetura que envia texto por isso é mais leve e consequente mais
 
 ***
 
-## WebAPI
+### WebAPI
 
 #### Convenções
 
@@ -150,4 +151,3 @@ As convenções tem a mesma função dos formatadores, define quais tipos de ret
 ```
 
 ***
-
