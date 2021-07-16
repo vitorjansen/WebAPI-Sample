@@ -43,3 +43,32 @@ Para complementar os métodos necessários no suporte a uma WebAPI às controlle
 [ApiController]
 public class ExampleWebApiController : ControllerBase
 ```
+
+***Rotas***
+
+As rota da classe é definida pelo atributo `Route`:
+
+```C#
+// [controller] = Parâmetro que se refere ao nome da classe em a palavra 'Controller'
+// Exemplo: api/ExampleWebApi
+[Route("api/[controller]")]
+[ApiController]
+public class ExampleWebApiController : ControllerBase
+```
+Entretanto quando se trata de métodos existem atributos especiais para definir a rota de acordo com o verbo Http.
+
+```C#
+// Com esses atributos torna-se redundante o uso do Route. Exemplos:
+[HttpGet]
+[HttpPost]
+[HttpPut]
+[HttpDelete]
+
+// Atributo + Parâmetro:
+[HttpGet("{id}")]
+
+// Atributo + Parâmetro + Definição do tipo de dado:
+[HttpGet("{id}:int")]
+```
+
+
