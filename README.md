@@ -114,3 +114,40 @@ public void Post([FromBody] string value)
 }
 ```
 
+*Formatador de reposta personalizado*
+
+É possível personalizar as repostas que serão enviadas:
+
+```C#
+// Implementação
+
+```
+
+***Analisadores e Convenções***
+
+Anlisadores
+
+Pacote: Microsoft.AspNetCore.Mvc.Api.Analyzers
+
+Tem por objetivo analizar os formatadores de repostas, e avisar caso o código retornado não corresponder ao que foi especificado.
+
+Convenções
+
+As convenções tem a mesma função dos formatadores, define quais tipos de retorno um método deve ter, entretanto não é programável, as regras são de acordo com a documentação do protocolo HTTP, cada verbo tem tipos de retornos específicos.
+
+```C#
+//Exemplos
+
+// Declaração para a classe
+[ApiConventionType(typeof(DefaultApiConventions))]
+
+// Declaração para método Post
+[ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Post))]
+
+// Convenções para Put
+[ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Put))]
+
+```
+
+***
+
