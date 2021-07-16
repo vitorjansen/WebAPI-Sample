@@ -71,4 +71,46 @@ Entretanto quando se trata de métodos existem atributos especiais para definir 
 [HttpGet("{id}:int")]
 ```
 
+***ActionResult***
+
+É o resultado de uma ação. 
+
+Encapsula diversos tipos de retorno, por isso é usado como resultado de um método ao invés de um objeto puro.
+
+```C#
+// Exemplos 
+ActionResult
+ActionResult<string>
+ActionResult<IEnumerable<int>>
+```
+*Atributos nos argumentos*
+
+Os atributoa nos argumetnos ajudam a aplicação a identificar de onde virá o parâmetro esperado 
+
+```C#
+[FromBody] // Indica que o argumento vem do body.
+[FromForm] // Indica que o argumento vem de um formulário.
+[FromQuery] // Indica que o argumento vem de uma query.
+
+// Implemetação
+[HttpPut("{id}")]
+public void Put(int id, [FromBody] string value)
+{
+}
+```
+
+*Formatadores de resposta*
+
+São os atributos que definem o tipo de retorno que o método pode produzir.
+
+```C#
+// namespace
+using Microsoft.AspNetCore.Http;
+
+[ProducesResponseType(typeof(ClasssType), StatusCodeStatus201Created)] // Define o código e o tipo do objeto no retorno
+[ProducesResponseType(StatusCodes.Status400BadReques] // Define apenas o código do retorno.
+public void Post([FromBody] string value)
+{
+}
+```
 
