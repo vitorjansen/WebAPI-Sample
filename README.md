@@ -151,3 +151,7 @@ As convenções tem a mesma função dos formatadores, define quais tipos de ret
 ```
 
 ***
+
+DTO (Data Tranfer Object)
+
+Conhecida também como ViewModels no MVC, essas classes tem por objetivo compilar apenas os atributos necesspários no momento de tranferência de dados, deste modo ganha-se performance caso uma das entidades seja muito complexa e evita expor dados sensíveis apenas para cumprir uma obrigatoriedade de implementação.
