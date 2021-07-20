@@ -152,11 +152,35 @@ As convenções tem a mesma função dos formatadores, define quais tipos de ret
 
 ***
 
-DTO (Data Tranfer Object)
+#### DTO (Data Tranfer Object)
 
 Conhecida também como ViewModels no MVC, essas classes tem por objetivo compilar apenas os atributos necesspários no momento de tranferência de dados, deste modo ganha-se performance caso uma das entidades seja muito complexa e evita expor dados sensíveis apenas para cumprir uma obrigatoriedade de implementação.
 
 Esta classe costuma receber as Annotations, deixando as Models "limpas".
 
 ***
+
+#### Segurança
+
+Atributos de autorização
+
+```C#
+[Authorize] // Exige autorização para acessar.
+[AllowAnonymous] // Libera da necessidade de autorização.
+```
+
+***Identity***
+
+***JWT (JSON Web Token)***
+
+***CORS (Cross-Origin Resource Sharing)***
+É implementado pelo browser, se a requisição vier via postman ou outro tipo de aplicação não há barramento.
+adicionando politica global
+[DisableCors]
+
+#### Versionameto e Documentação
+
+Versionamento
+
+pacotes: Microsoft.AspNetCore.Mvc.Versioning e Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer
 
